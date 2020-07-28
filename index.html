@@ -1,0 +1,122 @@
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <title>Authz</title>
+  <base href="./">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    
+<link rel="stylesheet" href="./styles.3ff695c00d717f2d2a11.css">
+    <style></style>
+    <style>.main-container[_ngcontent-c1]{display:flex;flex-direction:column;height:80%}</style>
+    <style>.data-container[_ngcontent-c2]{display:flex;flex:1 1 auto}.form-container[_ngcontent-c2]{padding:1em;flex:1}[_nghost-c2]{height:100%}</style><style>.action-container[_ngcontent-c3]{display:flex;height:100px;margin-left:20px}.spacer[_ngcontent-c3]{width:200px}button[_ngcontent-c3]{font-size:16px;border-radius:5px;padding:10px;margin:15px}.delete-action-button[_ngcontent-c3]{color:#fff;background:#8b0000}.expire-action-button[_ngcontent-c3]{color:#000;background:#daa520}button[_ngcontent-c3]:focus, button[_ngcontent-c3]:hover{-webkit-filter:invert(100%);filter:invert(100%)}.red[_ngcontent-c3]{color:#8b0000}</style>
+    <style>.sidebar-wrapper[_ngcontent-c4]{border-right:2px solid #000;flex:1 1 auto;min-width:25vw;max-width:33vw;padding:1em;min-height:50vh}</style><style>.tabs-ul[_ngcontent-c9]{margin-bottom:-1px}.tabs-li[_ngcontent-c9]{list-style-type:none;display:inline-block;background:#d3d3d3;margin:0 10px;padding:5px 10px;border-top-left-radius:5px;border-top-right-radius:5px;border:1px solid #000;opacity:.5;cursor:pointer}.tabs-li.selected[_ngcontent-c9]{border:5px solid #000;border-bottom:0;opacity:1;font-weight:800}.tabs-content[_ngcontent-c9]{border:1px solid #000;padding:10px}</style>
+    <style>.button-container[_ngcontent-c11]{margin-top:10px;margin-bottom:10px}.button-container[_ngcontent-c11]   button[_ngcontent-c11]{font-size:16px;border-radius:5px;padding:10px;margin-left:10px}button[_ngcontent-c11]{cursor:pointer}</style>
+    <style>.button-container[_ngcontent-c12]{margin-top:10px;margin-bottom:10px}.button-container[_ngcontent-c12]   button[_ngcontent-c12]{font-size:16px;border-radius:5px;padding:10px;margin-left:10px}</style>
+    <style>.table-container[_ngcontent-c13]{margin:10px;width:90%}tbody[_ngcontent-c13]   tr[_ngcontent-c13]:nth-child(odd)   td[_ngcontent-c13]{border-top:1px solid #000;border-bottom:1px solid #000}tbody[_ngcontent-c13]   tr[_ngcontent-c13]{cursor:pointer}tbody[_ngcontent-c13]   tr.selected[_ngcontent-c13]{font-weight:800}tbody[_ngcontent-c13]   tr.selected[_ngcontent-c13]   td[_ngcontent-c13]{border-top:5px solid #000;border-bottom:5px solid #000}tbody[_ngcontent-c13]   tr.selected[_ngcontent-c13]   td[_ngcontent-c13]:first-child{border-left:5px solid #000}tbody[_ngcontent-c13]   tr.selected[_ngcontent-c13]   td[_ngcontent-c13]:last-child{border-right:5px solid #000}td[_ngcontent-c13]{padding:.5em}.no-data-cell[_ngcontent-c13]{cursor:not-allowed}
+    </style>
+    </head>
+<body data-gr-c-s-loaded="true">
+  <app-root _nghost-c0="" ng-version="6.1.8">
+     
+        <header class="jumbotron"> 
+          <div class="container text-center">
+      <div _ngcontent-c0="" style="text-align:center">
+          <h1 _ngcontent-c0=""> DXtera Authorization Admin </h1>
+          <h1 _ngcontent-c0=""> Navigation Menu </h1>
+          <hr class="my-4">
+          <p _ngcontent-c0=""> Click on a tab to manage authorizations.The "User" tab will show you authorizations by user, i.e. Mary@example.edu.The "Function" tab will show you authorizations by role, i.e. Hiring Approvers </p>
+              </div> </div>
+      </header>
+    <nav>
+  <div class="nav nav-tabs nav-justified" id="nav-tab" role="tablist">
+    <a class="nav-item nav-link active" id="nav-user-tab" data-toggle="tab" href="#nav-user" role="tab"
+      aria-controls="nav-user" aria-selected="true">User Table</a>
+    <a class="nav-item nav-link" id="nav-function-tab" data-toggle="tab" href="#nav-function" role="tab"
+      aria-controls="nav-function" aria-selected="false">Function Table</a>
+  </div>
+</nav>
+      <div class="tab-content" id="nav-tabContent">
+  <div class="tab-pane fade show active" id="nav-user" role="tabpanel" aria-labelledby="nav-user-tab">
+      <div class="shadow-lg p-3 mb-5 bg-white rounded">
+      <h2>User Table</h2>
+  <p>Click on a user to see its current authorizations.</p>  
+  <input class="form-control" id="myInput" type="text" placeholder="Search for terms and similar terms">
+  <br>
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th>DisplayName</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody id="myTable">
+      <tr>
+        <td>FopeFoluwa</td>
+        <td>Admin</td>
+      </tr>
+      <tr>
+        <td>Display Connected</td>
+        <td>Teacher</td>
+      </tr>
+      <tr>
+        <td>Extend Display</td>
+        <td>Teacher</td>
+      </tr>
+    </tbody>
+  </table>
+      </div> 
+          </div>
+  <div class="tab-pane fade" id="nav-function" role="tabpanel" aria-labelledby="nav-function-tab">
+      <div class="shadow-lg p-3 mb-5 bg-white rounded">
+    <h2>Function Table</h2>
+  <p>Click on a function to see its current authorizations.</p>  
+  <input class="form-control" id="myInput" type="text" placeholder="Search for terms and similar terms">
+  <br>
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th>DisplayName</th>
+        <th>Description</th>  
+      </tr>
+    </thead>
+    <tbody id="myTable">
+      <tr>
+        <td>Admin</td>
+        <td>Thiis is the admin user</td>
+      </tr>
+      <tr>
+        <td>Teacher</td>
+        <td>This is a teacher</td>
+      </tr>
+    </tbody>
+  </table>
+      </div> 
+          </div>
+</div>
+      
+ 
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+    </app-root>
+ <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Need help? Check out our <a href="help.html">help documentation Your Website 2020 </p>
+    </div>
+    <!-- /.container -->
+  </footer>
+<script type="text/javascript" src="./runtime.58db6607081ba1289d07.js"></script><script type="text/javascript" src="./polyfills.acc437795615b685a0c3.js"></script><script type="text/javascript" src="./main.8f0cae5f40a7b7e4186f.js"></script>
+</body>
+</html>
